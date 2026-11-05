@@ -52,7 +52,6 @@ My role was product decisions (scope, data source, what to show in popups, hidin
 ## Run it locally
 
 ```bash
-python3 scripts/fetch_data.py   # optional: refresh the backup snapshot
 python3 -m http.server 8000      # then open http://localhost:8000
 ```
 
@@ -60,5 +59,4 @@ python3 -m http.server 8000      # then open http://localhost:8000
 
 ```
 index.html               the map (HTML, CSS, and JS in one file)
-scripts/fetch_data.py    refreshes the snapshot from the NYC Open Data API
 ```
