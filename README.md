@@ -24,7 +24,6 @@ An interactive map of every charter school location in New York City's five boro
 
 - **Source:** [2019–2020 School Locations](https://data.cityofnewyork.us/d/wg9x-4ke6) (NYC Department of Education, via NYC Open Data). This is the most recent school locations dataset on NYC Open Data that includes coordinates.
 - **Filter:** `managed_by_name = 'Charter'` (the dataset tags every school as either `DOE` or `Charter`)
-- **Loading:** the map pulls data **live from the NYC Open Data API** when the page opens, so nothing needs re-deploying if the city updates the dataset. If the API is unavailable, it falls back to the snapshot in `data/charter_schools.json`.
   
 ## Known limitations
 
@@ -46,7 +45,7 @@ Time-boxed to one hour, built with an AI assistant (Claude) as a pair programmer
 1. **Scoped the ask:** "a map of all charter schools in NYC" → a shareable, interactive web map a reviewer can open with one click (GitHub Pages), with no build step or API keys.
 2. **Found and checked the data:** compared NYC Open Data datasets, confirmed the charter flag and coordinates, and checked counts by borough and status.
 3. **Built** a single-page map with [Leaflet](https://leafletjs.com/) and [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster), with basemap tiles from OpenStreetMap.
-4. **Tested** the filters, de-duplication, popups, and the fallback to the saved snapshot in a headless browser.
+4. **Tested** the filters, de-duplication, and pop ups in a headless browser. 
 
 My role was product decisions (scope, data source, what to show in popups, hiding closed schools by default, documenting limitations); the AI did most of the code writing.
 
@@ -61,6 +60,5 @@ python3 -m http.server 8000      # then open http://localhost:8000
 
 ```
 index.html               the map (HTML, CSS, and JS in one file)
-data/charter_schools.json backup snapshot of the dataset
 scripts/fetch_data.py    refreshes the snapshot from the NYC Open Data API
 ```
