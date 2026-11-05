@@ -77,9 +77,9 @@ const SNAPSHOT = "data/charter_schools.json";
 const BOROUGHS = { X:["Bronx","#d1495b"], K:["Brooklyn","#2e6fbd"], M:["Manhattan","#edae49"], Q:["Queens","#00798c"], R:["Staten Island","#6a4c93"] };
 
 const map = L.map("map", { zoomControl:true }).setView([40.72, -73.94], 11);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  maxZoom: 19, subdomains: "abcd",
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 const cluster = L.markerClusterGroup({ showCoverageOnHover:false, maxClusterRadius:40 });
 map.addLayer(cluster);
