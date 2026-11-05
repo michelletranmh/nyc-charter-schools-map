@@ -2,13 +2,13 @@
 
 An interactive map of every charter school location in New York City's five boroughs.
 
-**Live map:** https://YOUR-USERNAME.github.io/nyc-charter-schools-map/
+**Live map:** https://michelletranmh.github.io/nyc-charter-schools-map/
 
 ![screenshot](screenshot.png)
 
 ## What it does
 
-- Plots **260 open charter school locations** (278 including those marked closed) across all five boroughs, color-coded by borough
+- Plots **260 open charter school locations** (278 including those marked closed) across all five boroughs in NYC, color-coded by borough
 - Click any pin for the school's address, grade levels, neighborhood, district, year opened, leader, and phone number, plus a Google Maps link
 - Filter by borough and school level, search by name, neighborhood, or address, and optionally show closed schools
 - Pins cluster when zoomed out so dense areas like the South Bronx and Central Brooklyn stay readable
@@ -27,8 +27,7 @@ An interactive map of every charter school location in New York City's five boro
 - **Source:** [2019–2020 School Locations](https://data.cityofnewyork.us/d/wg9x-4ke6) (NYC Department of Education, via NYC Open Data). This is the most recent school locations dataset on NYC Open Data that includes coordinates.
 - **Filter:** `managed_by_name = 'Charter'` (the dataset tags every school as either `DOE` or `Charter`)
 - **Loading:** the map pulls data **live from the NYC Open Data API** when the page opens, so nothing needs re-deploying if the city updates the dataset. If the API is unavailable, it falls back to the snapshot in `data/charter_schools.json`.
-- **Cleaning:** removed 5 duplicate rows (same school code and address), and hid schools marked `Closed` by default.
-
+  
 ## Known limitations
 
 1. **The data is from the 2019–20 school year.** NYC Open Data hasn't published a newer locations file. Schools that opened, moved, or closed since then won't be reflected, and leader names and phone numbers may be out of date.
@@ -49,7 +48,7 @@ Time-boxed to one hour, built with an AI assistant (Claude) as a pair programmer
 
 1. **Scoped the ask:** "a map of all charter schools in NYC" → a shareable, interactive web map a reviewer can open with one click (GitHub Pages), with no build step or API keys.
 2. **Found and checked the data:** compared NYC Open Data datasets, confirmed the charter flag and coordinates, and checked counts by borough and status.
-3. **Built** a single-page map with [Leaflet](https://leafletjs.com/) and [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster), with basemap tiles from CARTO and OpenStreetMap.
+3. **Built** a single-page map with [Leaflet](https://leafletjs.com/) and [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster), with basemap tiles from OpenStreetMap.
 4. **Tested** the filters, de-duplication, popups, and the fallback to the saved snapshot in a headless browser.
 
 My role was product decisions (scope, data source, what to show in popups, hiding closed schools by default, documenting limitations); the AI did most of the code writing.
