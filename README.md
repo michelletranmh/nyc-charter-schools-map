@@ -38,7 +38,6 @@ An interactive map of every charter school location in New York City's five boro
 - **Get current data.** Join to the DOE's current [LCGMS school report](https://infohub.nyced.org/reports-and-policies/citywide-information-and-data/lcgms) or the NY State Education Department school directory, and geocode new addresses with NYC's free Geoclient API.
 - **Add decision-useful layers.** Enrollment, demographics, and test results (from the DOE and the NYC Charter School Center) so the map answers *"which schools are good and have seats near me?"* and not just *"where are they?"*
 - **Find gaps in access.** Overlay school district boundaries and child population to show which neighborhoods have few charter options.
-- **Let users ask questions in plain English**, such as "K–5 charters within a mile of the 2/3 train in Crown Heights," by sending the user's question and the school data to an LLM.
 
 ## How I built it
 
