@@ -4,8 +4,6 @@ An interactive map of every charter school location in New York City's five boro
 
 **Live map:** https://michelletranmh.github.io/nyc-charter-schools-map/
 
-![screenshot](screenshot.png)
-
 ## What it does
 
 - Plots **260 open charter school locations** (278 including those marked closed) across all five boroughs in NYC, color-coded by borough
